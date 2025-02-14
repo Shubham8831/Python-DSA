@@ -128,3 +128,80 @@ e1.setEmpid(2)
 e1.setName("billu")
 e1.setSalary(50000)
 e1.getEmpData()
+
+
+#Assignment-2
+#1 Define a python class Person with instance object variables name and age. Set Instance object variables in 
+# __init__() method. Also define show() method to display name and age of a person.
+class person:
+    def __init__(self, name, age):
+        self.name =name
+        self.age =age
+
+    def show(self):
+        print(f"age: {self.age} and name: {self.name}")
+
+p1 = person("shubham", 25)
+p1.show()
+
+
+#2 Define a class Circle with instance object variable radius. Provide setter and getter for radius.
+#  Also define getArea() and getCircumference() methods.
+class circle:
+    def __init__(self, radius = None):
+        self.radius = radius
+
+    def setter(self, radius):
+        self.radius = radius
+
+    def getter(self):
+        print(self.radius)
+
+    def getArea(self):
+        print(3.14*self.radius*self.radius)
+
+    def getCircumference(self):
+        print(2*3.14*self.radius)
+
+c1 = circle()
+c1.setter(5)
+c1.getter()
+c1.getArea()
+c1.getCircumference()
+
+
+#3 Define a class Rectangle with length and breadth as instance object variables. 
+# Provide setDimensions(), showDimensions() and getArea() method in it.
+'same as above'
+
+#4 Define a class Book with instance object variables bookid, title and price. 
+# Initialise them via __init__() method. Also define method to show book variables.
+'same as above'
+
+#5 Define a class Team with instance object variable a list of team member names.
+#  Provide methods to input member names and display member names.
+
+class Team:
+    def __init__(self):
+        """Initialize the team with an empty list of member names."""
+        self.members = []
+
+    def add_member(self, name):
+        """Add a new member to the team."""
+        self.members.append(name)
+        print(f"{name} has been added to the team.")
+
+    def show_members(self):
+        """Display all team members."""
+        if self.members:
+            print("Team Members:")
+            for member in self.members:
+                print(f"- {member}")
+        else:
+            print("No members in the team.")
+
+# Example usage:
+team = Team()
+team.add_member("Alice")
+team.add_member("Bob")
+team.show_members()
